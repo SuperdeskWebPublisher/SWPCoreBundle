@@ -14,21 +14,8 @@
 
 namespace SWP\Bundle\CoreBundle\Model;
 
-use SWP\Bundle\ContentBundle\Doctrine\ODM\PHPCR\RouteObjectInterface;
+use SWP\Component\MultiTenancy\Model\Organization as BaseOrganization;
 
-interface HomepageBasedTenantInterface
+class Organization extends BaseOrganization
 {
-    /**
-     * Gets the homepage.
-     *
-     * @return RouteObjectInterface
-     */
-    public function getHomepage();
-
-    /**
-     * Sets the homepage.
-     *
-     * @param RouteObjectInterface $homepage
-     */
-    public function setHomepage(RouteObjectInterface $homepage);
 }
