@@ -14,12 +14,12 @@
 
 namespace SWP\Bundle\CoreBundle\Model;
 
-use SWP\Bundle\TemplatesSystemBundle\Model\Container as BaseContainer;
+use SWP\Bundle\ContentBundle\Model\Article as BaseArticle;
 use SWP\Component\MultiTenancy\Model\TenantAwareInterface;
 use SWP\Component\MultiTenancy\Model\TenantAwareTrait;
-use SWP\Component\TemplatesSystem\Gimme\Model\ContainerInterface;
+use SWP\Component\Storage\Model\PersistableInterface;
 
-class Container extends BaseContainer implements TenantAwareInterface, ContainerInterface
+class Article extends BaseArticle implements PersistableInterface , TenantAwareInterface
 {
     use TenantAwareTrait;
 }
