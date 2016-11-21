@@ -14,11 +14,11 @@
 
 namespace SWP\Bundle\CoreBundle\Model;
 
-use SWP\Bundle\TemplatesSystemBundle\Model\Container as BaseContainer;
-use SWP\Component\MultiTenancy\Model\TenantAwareInterface;
+use SWP\Bundle\ContentBundle\Model\ContentListInterface;
+use SWP\Component\ContentList\Model\ContentList as BaseContentList;
 use SWP\Component\MultiTenancy\Model\TenantAwareTrait;
 
-class Container extends BaseContainer implements TenantAwareInterface
+class ContentList extends BaseContentList implements ContentListInterface
 {
     use TenantAwareTrait;
 }
