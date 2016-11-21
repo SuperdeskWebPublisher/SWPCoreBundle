@@ -16,10 +16,9 @@ declare(strict_types=1);
 
 namespace SWP\Bundle\CoreBundle\Model;
 
-use SWP\Component\ContentList\Model\ContentList as BaseContentList;
-use SWP\Component\MultiTenancy\Model\TenantAwareTrait;
+use SWP\Component\MultiTenancy\Model\TenantAwareInterface;
+use SWP\Component\ContentList\Model\ContentListInterface as BaseContentListInterface;
 
-class ContentList extends BaseContentList implements ContentListInterface
+interface ContentListInterface extends BaseContentListInterface, TenantAwareInterface
 {
-    use TenantAwareTrait;
 }
