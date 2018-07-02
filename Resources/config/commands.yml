@@ -1,8 +1,8 @@
 services:
-    SWP\Bundle\CoreBundle\Command\UpdateOrganizationCommand:
-        tags:
-            - { name: 'console.command', command: 'swp:organization:update' }
+    _defaults:
+        autowire: true
+        autoconfigure: true
+        public: false
 
-    SWP\Bundle\CoreBundle\Command\CreateOrganizationCommand:
-        tags:
-            - { name: 'console.command', command: 'swp:organization:create' }
+    SWP\Bundle\CoreBundle\Command\:
+        resource: '../../Command/*'
